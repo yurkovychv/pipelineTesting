@@ -28,4 +28,4 @@ jobs:
         run: |
           echo "$GITHUB_CONTEXT"
           echo "$TITLE"
-          echo ${GITHUB_REPOSITORY#*/}
+          echo ${{ GITHUB_REPOSITORY#*/ }}
