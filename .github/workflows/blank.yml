@@ -23,8 +23,9 @@ jobs:
         
       - name: Run a one-line script
         env:
-          TITLE: $( echo ${{ github.ref }} | cut -d'/' -f 3)
+          TITLE: $( echo ${{ github.repository }} | cut -d'/' -f 3)
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: |
           echo "$GITHUB_CONTEXT"
           echo "$TITLE"
+          echo ${GITHUB_REPOSITORY#*/}
