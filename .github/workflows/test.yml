@@ -27,7 +27,6 @@ jobs:
           GITHUB_CONTEXT: ${{ toJson(github) }}
           HEAD_REF: ${{ toJson(github.ref) }}
           TITLE: $( echo ${{ github.ref }} | cut -d'/' -f 3)
-
         run: |
           echo "$GITHUB_CONTEXT"
           echo "$HEAD_REF"
